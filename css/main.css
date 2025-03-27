@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+}
+
+header{
+    display: flex;
+    align-content: center;
+}
+
+header nav ul{
+    display: flex;
+    color: white;
+    list-style: none;
+    gap: 15px;
+
+}
+
+main{
+
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(3, 25%) ;
+    row-gap: 15px;
+    padding: 20px;
+    align-content: center;
+
+}
+
+main div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+main .img-dos, main .img-quinco{
+    display: none;
+}
+
+footer{
+    color: whitesmoke;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px){
+
+    body{
+        background-color: tomato;
+    }
+
+    header {justify-content: center ;
+        }
+
+        main {
+            grid-template-columns: repeat(2. 1fr);
+            grid-template-rows: repeat(2 40%);
+            column-gap: 15px;
+        }
+
+        main .img-cuatro{
+            grid-column: span 2;
+        }
+}
+
+@media screen and (min-width: 1024px){
+
+    body{
+        background-color: black;
+    }
+     main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 30% 30% 20%;
+     }
+
+     main .img-dos, main .img-quinco{
+        display: block;
+     }
+
+     main .img-uno, main .img-tres{
+        grid-row: span 2;
+     }
+
+     main .img-dos, main .img-cuatro{
+        grid-column: span 1;
+     }
+
+     main .img-quinco {
+        grid-column: span 3;
+     }
+
+
+}
